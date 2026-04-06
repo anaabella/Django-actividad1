@@ -37,6 +37,5 @@ class User(models.Model):
     role = models.ForeignKey(Role, on_delete=models.CASCADE,
     related_name='users')
     activo = models.BooleanField(default=True)
-
     def __str__(self):
         return f"{self.nombre} ({self.rol})"
